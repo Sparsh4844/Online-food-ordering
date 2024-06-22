@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* font-family: "Ubuntu", sans-serif; */
+}
+
+.navbar .logo img {
+    height: 50px;
+    width: 50px;
+    filter: drop-shadow(2px 2px 5px black);
+}
+
+.navbar {
+    position: relative;
+    /* height: 60vh; */
+    display: flex;
+    flex-wrap: wrap;
+    /*align-items: center;
+        justify-content: center; */
+    background-color: rgba(255, 251, 251, 0.6);
+    /* z-index: 2; */
+}
+
+@media(max-width:600px) {
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .upper {
+        height: 30vh;
+    }
+
+    .navbar::before {
+        height: 30vh;
+    }
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    z-index: 2;
+}
+
+.navbar ul li {
+    margin: 17px;
+}
+
+.navbar ul li a {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+#navbar::before {
+    content: "";
+    background-image: url('/bg.png.jpg');
+    background-size: 100vw 60vh;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    /* opacity: 0.6; */
+
+}
+
+.upper {
+    /* margin: 50px 70px; */
+    height: 60vh;
+    background-image: url('/bg.png.jpg');
+    background-size: 100vw 60vh;
+    /* background: rgba(0, 0, 0, 0.6); */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* opacity: 0.6; */
+}
+
+.upper h1,
+.upper p {
+    color: white;
+}
+
+.upper p {
+    padding: 30px;
+}
+
+.upper input[type="button"] {
+    padding: 5px;
+    opacity: 0.8;
+    background-color: rgb(70, 70, 70);
+    color: white;
+    margin: 0 0 20px 0;
+    transition: all 1s ease;
+}
+
+.upper input[type="button"]:hover {
+    color: red;
+}
+
+
+.heading {
+
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: underline;
+    /* background-color: pink; */
+}
+
+/* cards  */
+.cards {
+    /* margin-top: 20px; */
+    /* border: 2px solid red; */
+    /* height: 150px; */
+    display: flex;
+    font-family: "Ubuntu", sans-serif;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* margin-top: 20px; */
+    /* backface-visibility: hidden; */
+}
+
+.card {
+    margin: 20px 10px;
+    width: 250px;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+
+.card img {
+    height: 72%;
+    filter: drop-shadow(10px 8px 6px black);
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 250px;
+    max-width: 250px;
+    border-radius: 25px;
+}
+
+.card-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    border-radius: 25px;
+    transition: all 2s ease;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* padding:2rem; */
+}
+
+.card-side.back {
+    transform: rotateY(-180deg);
+    padding: 0px 5px;
+    background-color: rgba(254, 204, 204, 0.6);
+    border: 1px solid red;
+}
+
+.card-side.back h2,
+.card-side.card-side.front h2 {
+    margin-bottom: 10px;
+    color: rgb(245, 5, 5);
+}
+
+.card-side.front {
+    padding: 0px 5px;
+    background-color: rgba(254, 204, 204, 0.6);
+    border: 1px solid red;
+}
+
+.card:hover .card-side.front {
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-side.back {
+    transform: rotateY(0deg);
+}
+
+/* clints section */
+#clint {
+    height: 30vh;
+    position: relative;
+}
+
+#clint::before {
+    content: "";
+    background: url('/bg1.png.jpg');
+    background-size: 100vw 30vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+#clint h2,
+.contact h2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+}
+
+#clint .logo {
+    /* margin: 30px; */
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#clint .logo img {
+    margin: 5px 50px;
+    width: 10vw;
+    filter: drop-shadow(2px 4px 6px);
+}
+
+/* contact section  */
+.contact {
+    position: relative;
+}
+
+.contact::before {
+    content: "";
+    background-image: url('/contact.png.jpg');
+    background-size: 100vw 70vh;
+    position: absolute;
+    height: 70vh;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    margin: 40px 0px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+}
+
+#form-group {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#form-group input {
+    width: 23vw;
+    padding: 5px;
+    margin: 20px 0px;
+    /* transition: all 1s ease; */
+}
